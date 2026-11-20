@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Good Burguer · Hamburguesas en Villa de Soto</title>
+  <meta name="description" content="Hamburguesas hechas al momento. Armá tu comanda y mandala por WhatsApp. Retiro en el local o envío.">
+  <meta name="theme-color" content="#14110e">
+  <link rel="preload" href="assets/fonts/lilita-one-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.webdriver) { document.documentElement.classList.add('intro'); setTimeout(function () { document.documentElement.classList.remove('intro'); }, 4000); }
+  </script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-burger" viewBox="0 0 48 40">
+      <path d="M5 17c0-8.5 8.5-14 19-14s19 5.5 19 14z" fill="currentColor"/>
+      <path d="M3 22.5c3 0 3-2.5 6-2.5s3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5 3-2.5 6-2.5 3 2.5 6 2.5 3-2.5 6-2.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <rect x="4" y="25.5" width="40" height="4.5" rx="2.25" fill="currentColor"/>
+      <path d="M6 33h36c0 3-2 4.5-5 4.5H11c-3 0-5-1.5-5-4.5z" fill="currentColor"/>
+      <g fill="#f6e7c8"><ellipse cx="17" cy="9" rx="1.5" ry=".9"/><ellipse cx="26" cy="7" rx="1.5" ry=".9"/><ellipse cx="33" cy="11" rx="1.5" ry=".9"/></g>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4.2 19.8l1.1-3.9A8.3 8.3 0 1 1 8.4 19z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9 8.6c.2-.5.5-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .4-.2.7-.6.9-1.8.9-6.5-2.6-7.3-5.4-.2-.8-.2-1.5-.1-2z" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9.8" r="2.3" fill="currentColor"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.2l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L12 16.6l-5.3 2.9 1.1-5.9-4.4-4.1 6-.8z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#menu">Saltar al menú</a>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Good Burguer, inicio">
+    <span class="brand-word">G<svg class="brand-o" aria-hidden="true"><use href="#i-burger"/></svg>OD</span> <span class="brand-word">BURGUER</span>
+  </a>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#menu">Menú</a>
+    <a href="#pedido">Pedido</a>
+    <a href="#resenas">Reseñas</a>
+    <a href="#visitanos">Visitanos</a>
+  </nav>
+  <a class="nav-ticket" href="#pedido" aria-label="Ver comanda">
+    Comanda <span class="nav-count" data-count>0</span>
+  </a>
+</header>
+
+<main id="top">
+  <!-- EL MURO: estuco, cartel y comanda colgada -->
+  <section class="wall" aria-labelledby="sign-title">
+    <div class="sconce sconce-l" aria-hidden="true"><span class="beam beam-up"></span><span class="lamp"></span><span class="beam beam-down"></span></div>
+    <div class="sconce sconce-r" aria-hidden="true"><span class="beam beam-up"></span><span class="lamp"></span><span class="beam beam-down"></span></div>
+
+    <h1 class="sign" id="sign-title" aria-label="Good Burguer">
+      <span class="sign-row" aria-hidden="true">
+        <span class="ch" style="--i:0">G</span><span class="ch ch-burger" style="--i:1"><svg><use href="#i-burger"/></svg></span><span class="ch" style="--i:2">O</span><span class="ch" style="--i:3">D</span>
+        <span class="gap"></span>
+        <span class="ch" style="--i:4">B</span><span class="ch" style="--i:5">U</span><span class="ch" style="--i:6">R</span><span class="ch" style="--i:7">G</span><span class="ch" style="--i:8">U</span><span class="ch" style="--i:9">E</span><span class="ch" style="--i:10">R</span>
+      </span>
+    </h1>
+    <div class="lintel" aria-hidden="true"></div>
+
+    <div class="board">
+      <div class="board-main">
+
+        <!-- HERO -->
+        <div class="hero">
+          <span class="hero-burger" aria-hidden="true"><svg><use href="#i-burger"/></svg></span>
+          <div class="status" data-status>
+            <span class="neon" aria-hidden="true">
+              <svg viewBox="0 0 120 64" class="neon-svg">
+                <g class="neon-burger" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4">
+                  <path class="tube t-bun" d="M38 24c0-8 10-13 22-13s22 5 22 13z"/>
+                  <path class="tube t-let" d="M36 29c3 0 3-2.4 6-2.4s3 2.4 6 2.4 3-2.4 6-2.4 3 2.4 6 2.4 3-2.4 6-2.4 3 2.4 6 2.4 3-2.4 6-2.4"/>
+                  <path class="tube t-pat" d="M37 33.5h46"/>
+                  <path class="tube t-bun" d="M39 38h42c0 3-2 4.5-5 4.5H44c-3 0-5-1.5-5-4.5z"/>
+                </g>
+                <text class="tube t-open" x="60" y="60" text-anchor="middle">OPEN</text>
+              </svg>
+            </span>
+            <span class="status-text"><strong data-status-title>Abierto ahora</strong><span data-status-sub>Hoy hasta las 00:30</span></span>
+          </div>
+
+          <h2 class="hero-title">Hamburguesas a la plancha, hechas cuando las pedís.</h2>
+          <p class="hero-lede">Elegí, sumá a la comanda y mandala por WhatsApp. Retirás en el local o te la llevamos.</p>
+
+          <p class="specials-cap"><span>Las más pedidas</span><span>Precios de ejemplo</span></p>
+          <ul class="specials" aria-label="Las más pedidas" data-specials></ul>
+
+          <a class="link-arrow" href="#menu">Ver el menú completo <svg><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!-- MENÚ -->
+        <div class="menu" id="menu">
+          <h2 class="sec-title">El menú</h2>
+          <div class="tabs" role="tablist" aria-label="Categorías del menú" data-tabs></div>
+          <div class="menu-panels" data-panels></div>
+          <p class="sample-note">Precios en pesos argentinos. Menú de ejemplo: reemplazar por el real.</p>
+        </div>
+
+        <!-- PEDIDO -->
+        <div class="order" id="pedido">
+          <h2 class="sec-title">Completá tu pedido</h2>
+          <p class="order-lede">Revisá la comanda, contanos cómo lo querés y te abre WhatsApp con el pedido ya escrito. Lo confirmamos por ahí.</p>
+
+          <div class="ticket-mobile" data-ticket-host="mobile"></div>
+
+          <form class="order-form" data-form novalidate>
+            <div class="field">
+              <label for="f-name">Tu nombre</label>
+              <input id="f-name" name="name" autocomplete="given-name" placeholder="Cómo te llamamos" required>
+              <p class="field-error" data-error="name"></p>
+            </div>
+
+            <fieldset class="field">
+              <legend>¿Cómo lo querés?</legend>
+              <div class="seg" data-seg="mode">
+                <label><input type="radio" name="mode" value="retiro" checked><span>Retiro en el local</span></label>
+                <label><input type="radio" name="mode" value="envio"><span>Envío a domicilio</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field field-address" data-address hidden>
+              <label for="f-address">Dirección de entrega</label>
+              <input id="f-address" name="address" autocomplete="street-address" placeholder="Calle, número y referencia">
+              <p class="field-hint">El costo de envío te lo confirmamos por WhatsApp.</p>
+              <p class="field-error" data-error="address"></p>
+            </div>
+
+            <fieldset class="field">
+              <legend>¿Cómo pagás?</legend>
+              <div class="seg" data-seg="pay">
+                <label><input type="radio" name="pay" value="Efectivo" checked><span>Efectivo</span></label>
+                <label><input type="radio" name="pay" value="Transferencia"><span>Transferencia</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-notes">Aclaraciones <span class="opt">opcional</span></label>
+              <textarea id="f-notes" name="notes" rows="3" placeholder="Sin cebolla, punto de la carne, timbre que no anda…"></textarea>
+            </div>
+
+            <p class="form-error" data-error="cart" role="alert"></p>
+            <button class="btn-wa" type="submit">
+              <svg><use href="#i-wa"/></svg>
+              <span>Enviar comanda por WhatsApp</span>
+              <span class="btn-total" data-total-btn>$0</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- LA COMANDA (columna fija en escritorio) -->
+      <aside class="board-aside" aria-label="Tu comanda">
+        <div class="rail" aria-hidden="true"><span class="clip"></span></div>
+        <div data-ticket-host="aside"></div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="gate" aria-hidden="true"></div>
+
+  <!-- RESEÑAS: la pared naranja de adentro -->
+  <section class="reviews" id="resenas" aria-labelledby="rev-title">
+    <div class="reviews-head">
+      <h2 class="sec-title" id="rev-title">Lo que dicen los que vinieron</h2>
+      <div class="score" aria-label="Puntaje promedio 4,8 de 5">
+        <span class="score-num">4,8</span>
+        <span class="stars" aria-hidden="true" data-stars="5"></span>
+      </div>
+    </div>
+    <ul class="review-list" data-reviews></ul>
+    <p class="sample-note on-orange">Reseñas y puntaje de ejemplo: reemplazar por los reales de Google.</p>
+    <p class="reviews-link"><a class="link-arrow on-orange" href="https://maps.app.goo.gl/jZQkhLNZxn7ZKATRA" target="_blank" rel="noopener">Ver y dejar reseñas en Google <svg><use href="#i-arrow"/></svg></a></p>
+  </section>
+
+  <!-- VISITANOS -->
+  <div class="visit-wrap">
+  <section class="visit" id="visitanos" aria-labelledby="visit-title">
+    <figure class="facade">
+      <img src="assets/fachada.jpg" alt="La fachada de Good Burguer de noche: cartel naranja encendido, rejas negras abiertas y el salón iluminado." width="1217" height="864" loading="lazy">
+    </figure>
+    <div class="visit-info">
+      <h2 class="sec-title" id="visit-title">Pasá a comer</h2>
+      <p class="visit-lede">Con las rejas abiertas y el cartel prendido, estamos atendiendo.</p>
+      <dl class="facts">
+        <div><dt><svg><use href="#i-pin"/></svg>Dirección</dt><dd data-address-text></dd></div>
+        <div><dt><svg><use href="#i-clock"/></svg>Horarios</dt><dd data-hours-text></dd></div>
+        <div><dt><svg><use href="#i-wa"/></svg>WhatsApp</dt><dd data-phone-text></dd></div>
+      </dl>
+      <a class="btn-ghost" href="https://maps.app.goo.gl/jZQkhLNZxn7ZKATRA" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Cómo llegar</a>
+    </div>
+    <div class="map" data-map>
+      <div class="map-fallback">
+        <svg aria-hidden="true"><use href="#i-pin"/></svg>
+        <strong>Good Burguer</strong>
+        <span data-address-text></span>
+        <a href="https://maps.app.goo.gl/jZQkhLNZxn7ZKATRA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+      <iframe title="Ubicación de Good Burguer en Google Maps" src="https://www.google.com/maps?q=-30.8541338,-64.9802496&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  </div>
+</main>
+
+<footer class="night">
+  <p class="night-sign"><span>G<svg aria-hidden="true"><use href="#i-burger"/></svg>OD</span> BURGUER</p>
+  <p class="night-meta"><span data-address-text></span> · <a href="#pedido">Hacé tu pedido</a></p>
+  <p class="night-small">© <span data-year></span> Good Burguer</p>
+</footer>
+
+<!-- Barra de comanda en celulares -->
+<a class="dock" href="#pedido" data-dock aria-label="Ver comanda">
+  <span class="dock-count"><span data-count>0</span> en la comanda</span>
+  <span class="dock-total" data-total-dock>$0</span>
+  <span class="dock-cta">Ver <svg><use href="#i-arrow"/></svg></span>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
